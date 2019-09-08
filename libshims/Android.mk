@@ -1,6 +1,4 @@
-#!/bin/bash
-#
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,19 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-set -e
+LOCAL_PATH := $(call my-dir)
 
-# Required!
-export DEVICE=daisy
-export DEVICE_COMMON=msm8953-daisy
-export VENDOR=xiaomi
-
-export DEVICE_BRINGUP_YEAR=2019
-
-./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@
-
-# Load camera.msm8953.so shim
-CAM_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.msm8953.so
-patchelf --add-needed camera.msm8953_shim.so "$CAM_MSM8953"
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := camera_msm8953_shim.cpp
+LOCAL_SHARED_LIBRARIES := libui libutils
+LOCAL_MODULE := camera.sdm660_shim
+LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
