@@ -14,7 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_daisy.mk
+    $(LOCAL_DIR)/aosp_daisy.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_daisy-eng
+    aosp_daisy-eng \
+    aosp_daisy-userdebug \
+    aosp_daisy-user
