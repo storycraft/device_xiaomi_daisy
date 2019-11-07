@@ -1,13 +1,20 @@
-# Audio ACDB - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
-vendor/etc/acdbdata/QRD/QRD_adsp_avs_config.acdb
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
+# Audio - from Sakura
+vendor/lib/hw/audio.primary.msm8953.so|BA830639280C8E0151CC77A4D4EAFCBE9DC560E6
+vendor/lib/libaudio_log_utils.so|C0187996E4AA81683518645D1E1931AFEA5491DE
+vendor/lib/libtinycompress_vendor.so|FCB516620A215B7CB2AFEB2626599F69715A3C45
+vendor/lib64/hw/audio.primary.msm8953.so|94A255A6D9B20B80C190B9F1ADDE9C8C79808046
+vendor/lib64/libaudio_log_utils.so|7200B1D05406530EF20FB8AC1BFD2B2E1845D0DD
+vendor/lib64/libtinycompress_vendor.so|27487B2C33AFD2704DEC9A90B6428955AC1E08E8
+
+# Audio ACDB - from Sakura
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|5438A8AE33D7F323173779BB81EE0AC42DA879E6
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|AC77C80D2DDC5853F9BCDEB599D4F0C0AD8CDB58
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|279DC326A549DF780082151793ADDE266FEDB480
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|AE8AC3DCE358DBFEACB90B736793D5CA023AA9DB
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|144C397B093137A3AF9CC618A6F5434DA4A01D08
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|DF515758FCD2D5EB6EDFAD627D2C02642D3B5220
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|BA3D7670485F5E3F5D0F4B5753873875408E0746
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|B780C7D8FDD350A3F7AEFFAA0BCF311F5FDDA0F6
 
 # Camera Actuators - from sakura
 vendor/lib/libactuator_sakura_dw9714v_ofilm.so
