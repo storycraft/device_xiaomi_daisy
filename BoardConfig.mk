@@ -62,5 +62,5 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 -include vendor/xiaomi/daisy/BoardConfigVendor.mk
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_daisy
-TARGET_RECOVERY_DEVICE_MODULES := libinit_daisy
+#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_daisy
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_daisy
