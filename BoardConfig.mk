@@ -50,7 +50,7 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2019-05-05
+VENDOR_SECURITY_PATCH := 2019-11-05
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
@@ -62,7 +62,3 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/daisy/BoardConfigVendor.mk
-
-# Vendor init
-#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_daisy
-#TARGET_RECOVERY_DEVICE_MODULES := libinit_daisy
