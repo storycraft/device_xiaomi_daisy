@@ -21,12 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common revenge stuff.
+$(call inherit-product, vendor/revengeos/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := aosp_daisy
+PRODUCT_NAME := revengeos_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
@@ -43,17 +43,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 
-# Use Gcam and Jelly
-TARGET_USE_GCAM := false
-TARGET_USE_JELLY := true
 
-TARGET_BOOT_ANIMATION_RES := 2280
 
-# Set this flag in build script
-ifeq ($(CURRENT_BUILD_TYPE), gapps)
-# Use Gapps
-  TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-  WITH_GAPPS := true
-  TARGET_GAPPS_ARCH := arm64
-  IS_PHONE := true
-endif
+
+
+TARGET_BOOT_ANIMATION_RES := 1080
+
