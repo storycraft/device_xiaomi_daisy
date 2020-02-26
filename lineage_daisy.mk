@@ -44,6 +44,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 #BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIXM:user/release-keys"
 
-
 TARGET_BOOT_ANIMATION_RES := 2280
-endif
