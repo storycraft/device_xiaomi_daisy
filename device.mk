@@ -93,8 +93,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 	
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_8953
+# PRODUCT_PACKAGES += vendor.lineage.touch@1.0-service.xiaomi_8953
 
 # Trust HAL
 PRODUCT_PACKAGES += \
