@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
-# Inherit some common AEX stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
@@ -44,17 +44,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 #BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIXM:user/release-keys"
 
-# Use Gcam and Jelly
-TARGET_USE_GCAM := false
-TARGET_USE_JELLY := true
 
 TARGET_BOOT_ANIMATION_RES := 2280
-
-# Set this flag in build script
-ifeq ($(CURRENT_BUILD_TYPE), gapps)
-# Use Gapps
-  TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-  WITH_GAPPS := true
-  TARGET_GAPPS_ARCH := arm64
-  IS_PHONE := true
 endif
