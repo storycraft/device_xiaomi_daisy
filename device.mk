@@ -51,8 +51,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Inherit from msm8953-common
-$(call inherit-product, device/xiaomi/msm8953-common/msm8953.mk)
+# Inherit from msm8953-daisy
+$(call inherit-product, device/xiaomi/msm8953-daisy/msm8953.mk)
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
