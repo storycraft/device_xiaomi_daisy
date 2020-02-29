@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_daisy.mk
+    $(LOCAL_DIR)/havoc_daisy.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_daisy-eng \
-    lineage_daisy-userdebug \
-    lineage_daisy-user
+    havoc_daisy-eng \
+    havoc_daisy-userdebug \
+    havoc_daisy-user
