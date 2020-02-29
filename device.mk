@@ -65,9 +65,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/me.phh.treble.app.xml:system/etc/permissions/me.phh.treble.app.xml
-
 # Hostapd fix
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
