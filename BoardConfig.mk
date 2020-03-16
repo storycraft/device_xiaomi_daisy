@@ -190,11 +190,6 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 
-# SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-# BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-min
-
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
 
@@ -238,9 +233,10 @@ TARGET_NO_RECOVERY := true
 VENDOR_SECURITY_PATCH := 2019-11-05
 
 # Sepolicy
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
