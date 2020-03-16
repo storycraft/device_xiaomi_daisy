@@ -1,9 +1,3 @@
-<!--
-    Input:
-        manifest.xml
-        manifest_ab.xml
-        keymaster_ota.xml
--->
 <manifest version="1.0" type="device" target-level="2">
     <hal format="hidl">
         <name>android.hardware.audio</name>
