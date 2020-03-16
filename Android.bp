@@ -1,5 +1,6 @@
 subdirs = [
-    "ims"
+    "ims",
+	"camera"
 ]
 soong_namespace {
     imports: ["hardware/qcom/bootctrl"],
