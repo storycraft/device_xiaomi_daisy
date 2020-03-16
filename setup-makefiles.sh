@@ -18,11 +18,31 @@
 
 set -e
 
-# Required!
-export DEVICE=daisy
-export DEVICE_COMMON=msm8953-daisy
-export VENDOR=xiaomi
+DEVICE=daisy
+VENDOR=xiaomi
 
-export DEVICE_BRINGUP_YEAR=2017
+INITIAL_COPYRIGHT_YEAR=2017
 
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+# Load extract_utils and do some sanity checks
+MY_DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+
+SOURCE_ROOT="$MY_DIR"/../../..
+
+HELPER="$SOURCE_ROOT"/vendor/havoc/build/tools/extract_utils.sh
+if [ ! -f "$HELPER" ]; then
+    echo "Unable to find helper script at $HELPER"
+    exit 1
+fi
+. "$HELPER"
+
+# Initialize the helper
+setup_vendor "$DEVICE" "$VENDOR" "$SOURCE_ROOT"
+
+# Copyright headers and guards
+write_headers
+
+write_makefiles "$MY_DIR"/proprietary-files.txt
+
+# Finish
+write_footers

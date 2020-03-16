@@ -1,0 +1,2 @@
+allow surfaceflinger vendor_file:file { execute getattr open read };
+allow surfaceflinger sysfs_kgsl:file { getattr read open };
