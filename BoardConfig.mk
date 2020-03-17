@@ -138,12 +138,13 @@ TARGET_NO_RPC := true
 #LOC_HIDL_VERSION := 3.0
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_MANIFEST_FILE           := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE             := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8953
-TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8953
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_msm8953
+TARGET_RECOVERY_DEVICE_MODULES := //$(DEVICE_PATH):libinit_msm8953
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
