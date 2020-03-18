@@ -430,8 +430,19 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 # Thermal
+PRODUCT_PACKAGES += \
+    thermal.msm8953
+
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
+# ThermalController app
+PRODUCT_PACKAGES += \
+    ThermalController
 
 # USB HAL
 PRODUCT_PACKAGES += \
@@ -440,14 +451,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     vndk-sp
-
-# Thermal
-PRODUCT_PACKAGES += \
-    thermal.msm8953
-
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
