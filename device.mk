@@ -114,9 +114,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor \
+    android.hardware.camera.provider@2.4-service
     Snap
 
 # Configstore
@@ -157,7 +155,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.2-service.clearkey \
     android.hardware.drm@1.2-service.widevine
-	
+
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -240,6 +238,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
+
+# init.d support
+PRODUCT_PACKAGES += \
+    sysinit
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -423,7 +425,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
-	$(LOCAL_PATH)/product-permissions/privapp-permissions-qti.xml:system/product/etc/permissions/privapp-permissions-qti.xml
+	$(LOCAL_PATH)/permissions/product-privapp-permissions-qti.xml:system/product/etc/permissions/privapp-permissions-qti.xml
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.sensorservice@1.0-v27.so \
