@@ -2317,6 +2317,10 @@ vendor/etc/camera/vince_ov5675_ofilm_chromatix_india.xml|e7e90221ea1b0687b614233
 vendor/etc/camera/vince_ov5675_qtech_chromatix.xml|4ac87ed79eba9e8e90ce9a2f04bc754058550091
 vendor/etc/camera/vince_ov5675_qtech_chromatix_india.xml|3c77bcceec7d5d48ac082c6846b41577506d29eb
 
+# cryptfshw - from daisy
+vendor/lib/vendor.qti.hardware.cryptfshw@1.0.so
+vendor/lib64/vendor.qti.hardware.cryptfshw@1.0.so
+
 # Charger - from sakura
 vendor/bin/hvdcp_opti
 
